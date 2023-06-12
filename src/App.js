@@ -1,19 +1,11 @@
 import React from 'react';
+import Header from "./components/Header";
 
 function App() {
     return (
         <div className="App">
-            <header>
-                <nav>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About me</a></li>
-                        <li><a href="#motivation">Motivation</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#account">My environment</a></li>
-                    </ul>
-                </nav>
-            </header>
+            <Header />
+            <a href="tel:+31613630011"><button>Call +31613630011</button></a>
         </div>
     );
 }
