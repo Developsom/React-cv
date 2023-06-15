@@ -1,4 +1,5 @@
 import React from 'react';
+import './Motivation.css';
 
 function Motivation() {
     return (
