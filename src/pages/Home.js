@@ -1,33 +1,37 @@
 import React from 'react';
 import './Home.css';
+import Call from "../components/Call";
+import Download from "../components/Download";
 
 const Home = () => {
     return (
         <div>
             <header>
-                <h1>Welcome to Your Home</h1>
+                <h1>Welcome to My Portfolio</h1>
                 <img src="home_image.jpg" alt="Home Image" />
             </header>
 
             <main>
                 <section>
-                    <h2>Discover Comfort and Style</h2>
-                    <p>At Your Home, we believe that every home should be a sanctuary—a place where you can relax, unwind, and create lasting memories. Whether you're looking to revamp your living space or find inspiration for a new home, we have everything you need to turn your vision into reality.</p>
+                    <h2>Discover My Skills and Projects</h2>
+                    <p>At My Portfolio, I showcase my skills and projects in web development, software engineering, and more. It's a place where you can explore my work, get to know me better, and see the impact I've made in the world of technology.</p>
+                    <Download />
                 </section>
 
                 <section>
-                    <h2>Explore Our Collections</h2>
+                    <h2>Explore My Areas of Expertise</h2>
                     <ul>
-                        <li>Living Room</li>
-                        <li>Bedroom</li>
-                        <li>Kitchen</li>
-                        <li>Bathroom</li>
+                        <li>Front-end Development</li>
+                        <li>Back-end Development</li>
+                        <li>Full-stack Development</li>
+                        <li>UI/UX Design</li>
                     </ul>
+                    <Call />
                 </section>
             </main>
 
             <footer>
-                <p>&copy; 2023 Your Home. All rights reserved.</p>
+                <p>&copy; 2023 My Portfolio. All rights reserved.</p>
             </footer>
         </div>
     );
