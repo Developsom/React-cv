@@ -11,7 +11,7 @@ function Header() {
                         <li><a href="#about">About me</a></li>
                         <li><a href="#motivation">Motivation</a></li>
                         <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#account">My environment</a></li>
+                        <li><a href="#account">Log in / Register</a></li>
                     </ul>
                 </nav>
             </header>
