@@ -1,11 +1,14 @@
 import React from 'react';
+import Header from "./components/Header";
+import Call from "./components/Call";
+import Download from "./components/Download";
 
 function App() {
     return (
         <div className="App">
-            <a href={process.env.PUBLIC_URL + '/assets/Cv.pdf'} download>
-                <button>Download CV</button>
-            </a>
+            <Header />
+            <Call />
+            <Download />
         </div>
     );
 }

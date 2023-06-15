@@ -1,4 +1,5 @@
 import React from 'react';
+import './Call.css';
 
 function Call() {
     return (
