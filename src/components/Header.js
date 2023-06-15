@@ -4,23 +4,23 @@ import './Header.css';
 
 function Header() {
     return (
-        <header>
+        <header className="Header">
             <nav>
                 <ul>
                     <li>
-                        <Link to="/">Home</Link>
+                        <Link to="/" className="Header-link">Home</Link>
                     </li>
                     <li>
-                        <Link to="/about">About</Link>
+                        <Link to="/about" className="Header-link">About</Link>
                     </li>
                     <li>
-                        <Link to="/motivation">Motivation</Link>
+                        <Link to="/motivation" className="Header-link">Motivation</Link>
                     </li>
                     <li>
-                        <Link to="/portfolio">Portfolio</Link>
+                        <Link to="/portfolio" className="Header-link">Portfolio</Link>
                     </li>
                     <li>
-                        <Link to="/auth">Log in / Register</Link>
+                        <Link to="/auth" className="Header-link">Log in / Register</Link>
                     </li>
                 </ul>
             </nav>
@@ -29,3 +29,4 @@ function Header() {
 }
 
 export default Header;
+
