@@ -1,0 +1,55 @@
+/* CSS for Header */
+.Header header {
+    background-color: #333;
+    padding: 10px;
+}
+
+.Header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.Header nav ul li {
+    display: inline-block;
+}
+
+.Header nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.Header nav ul li a:hover {
+    background-color: #555;
+}
+
+/* CSS for Download component */
+.Download {
+    text-align: center;
+}
+
+.Download button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+/* CSS for Call component */
+.Call {
+    text-align: center;
+}
+
+.Call button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 10px;
+}
