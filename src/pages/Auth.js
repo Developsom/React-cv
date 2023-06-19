@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import './Auth.css';
 
 function Auth() {
@@ -18,23 +19,28 @@ function Auth() {
         setIsRegistered(!isRegistered);
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Handle authentication logic here
-        if (isRegistered) {
-            // Login logic
-            console.log('Logging in...');
-            console.log('Email:', email);
-            console.log('Password:', password);
-        } else {
-            // Register logic
-            console.log('Registering...');
-            console.log('Email:', email);
-            console.log('Password:', password);
+
+        try {
+            if (isRegistered) {
+                // Login logic
+                const response = await axios.post('http://localhost:8080/api/login', { email, password });
+                console.log('Login successful');
+                console.log('Response:', response.data);
+            } else {
+                // Register logic
+                const response = await axios.post('http://localhost:8080/api/register', { email, password });
+                console.log('Registration successful');
+                console.log('Response:', response.data);
+            }
+
+            // Reset form fields
+            setEmail('');
+            setPassword('');
+        } catch (error) {
+            console.error('Error:', error);
         }
-        // Reset form fields
-        setEmail('');
-        setPassword('');
     };
 
     return (
@@ -52,7 +58,7 @@ function Auth() {
                 <button type="submit">{isRegistered ? 'Login' : 'Register'}</button>
             </form>
             <p>
-                {isRegistered ? 'Don\'t have an account?' : 'Already have an account?'}
+                {isRegistered ? "Don't have an account?" : 'Already have an account?'}
                 <button onClick={handleToggle}>{isRegistered ? 'Register' : 'Login'}</button>
             </p>
         </div>
@@ -60,3 +66,4 @@ function Auth() {
 }
 
 export default Auth;
+
